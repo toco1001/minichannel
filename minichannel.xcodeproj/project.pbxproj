@@ -19,6 +19,7 @@
 		8C7E0D031E30B8CA00F9B396 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E0D011E30B8CA00F9B396 /* MovieTableViewCell.swift */; };
 		8C7E0D041E30B8CA00F9B396 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7E0D021E30B8CA00F9B396 /* MovieTableViewCell.xib */; };
 		8CE3947D1E30D46000B084D4 /* MoviePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE3947C1E30D46000B084D4 /* MoviePlayerViewController.swift */; };
+		DD21820B1E33382B006B3EAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD21820A1E33382B006B3EAC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		8C7E0D021E30B8CA00F9B396 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		8CE3947C1E30D46000B084D4 /* MoviePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePlayerViewController.swift; sourceTree = "<group>"; };
 		CBD74B574D083D3CE358C7C4 /* Pods-minichannel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-minichannel.release.xcconfig"; path = "Pods/Target Support Files/Pods-minichannel/Pods-minichannel.release.xcconfig"; sourceTree = "<group>"; };
+		DD21820A1E33382B006B3EAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				8C7E0D021E30B8CA00F9B396 /* MovieTableViewCell.xib */,
 				8C66B2DF1E2F6729004567B9 /* ViewController.swift */,
 				8C7046C61E32E1B500F36100 /* MovieInfo.swift */,
+				DD21820A1E33382B006B3EAC /* GoogleService-Info.plist */,
 			);
 			path = minichannel;
 			sourceTree = "<group>";
@@ -144,7 +147,7 @@
 				TargetAttributes = {
 					8C66B2D91E2F6728004567B9 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = EW7UXD84L5;
+						DevelopmentTeam = K7HURQ6RSZ;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -176,6 +179,7 @@
 				8C66B2E81E2F6729004567B9 /* LaunchScreen.storyboard in Resources */,
 				8C7E0D041E30B8CA00F9B396 /* MovieTableViewCell.xib in Resources */,
 				8C66B2E51E2F6729004567B9 /* Assets.xcassets in Resources */,
+				DD21820B1E33382B006B3EAC /* GoogleService-Info.plist in Resources */,
 				8C66B2E31E2F6729004567B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +214,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CA117AFC95C5A4CDF60D92E9 /* [CP] Copy Pods Resources */ = {
@@ -363,7 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = EW7UXD84L5;
+				DEVELOPMENT_TEAM = K7HURQ6RSZ;
 				INFOPLIST_FILE = minichannel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.donuts.minichannel;
@@ -380,7 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = EW7UXD84L5;
+				DEVELOPMENT_TEAM = K7HURQ6RSZ;
 				INFOPLIST_FILE = minichannel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.donuts.minichannel;

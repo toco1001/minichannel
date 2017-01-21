@@ -18,7 +18,16 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         // Do any additional setup after loading the view.
 
         // ここに認証チェックを追加する
+      GIDSignIn.sharedInstance().uiDelegate = self
     }
+  
+  func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
+    print("ログインしました")
+    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    if let nc: UINavigationController = mainStoryboard.instantiateViewController(withIdentifier: "nc") as? UINavigationController {
+      self.present(nc, animated: true, completion: nil)
+    }
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
