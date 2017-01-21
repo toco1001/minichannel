@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
   
   var window: UIWindow?
   
-  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
@@ -28,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     return true
   }
-
+  
   
   
   func applicationWillResignActive(_ application: UIApplication) {
@@ -56,28 +55,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
   func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
     // 認証処理を追加する
     return GIDSignIn.sharedInstance().handle(url,
-                                                sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
-                                                annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+                                             sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                             annotation: options[UIApplicationOpenURLOptionsKey.annotation])
   }
   
   public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
     // 認証後のサインイン処理を実装する
     if let error = error {
-      print(error.localizedDescription)
+      print(error)
       return
     }
     
-    let authentication = user.authentication
-    let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!, accessToken: (authentication?.accessToken)!)
-    FIRAuth.auth()?.signIn(with: credential, completion: { firebaseUser, error in
-      
-    })
+    if let authentication = user.authentication {
+      let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+      FIRAuth.auth()?.signIn(with: credential, completion: { firebaseUser, error in
+        print(error)
+      })
+    }
   }
-  
-  func sign(_ signIn: GIDSignIn!, didDisconnectWith user:GIDGoogleUser!, withError error: Error!) {
-    // Perform any operations when the user disconnects from app here.
-    // ...
-  }
-  
 }
 

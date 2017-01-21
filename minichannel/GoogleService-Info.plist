@@ -7,19 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>383961076876-sme8dc46k7j573dso878m0f5qqiv0dla.apps.googleusercontent.com</string>
+	<string>487042495479-5ka9vhma9udivbu9qoeacdvdk46ebl31.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.383961076876-sme8dc46k7j573dso878m0f5qqiv0dla</string>
+	<string>com.googleusercontent.apps.487042495479-5ka9vhma9udivbu9qoeacdvdk46ebl31</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBI70JdMF0KiwZbXtlNiiPQGjTEwyaGFZU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>383961076876</string>
+	<string>487042495479</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>jp.ne.donuts.minichannel</string>
+	<string>com.toco.minichannel</string>
 	<key>PROJECT_ID</key>
-	<string>minichannel-fffa6</string>
+	<string>minichannel-6042e</string>
 	<key>STORAGE_BUCKET</key>
-	<string>minichannel-fffa6.appspot.com</string>
+	<string>minichannel-6042e.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:383961076876:ios:ba7b861139120b10</string>
+	<string>1:487042495479:ios:696d32b23494ee7f</string>
 	<key>DATABASE_URL</key>
-	<string>https://minichannel-fffa6.firebaseio.com</string>
+	<string>https://minichannel-6042e.firebaseio.com</string>
 </dict>
 </plist>
